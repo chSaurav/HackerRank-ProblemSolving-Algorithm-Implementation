@@ -1,0 +1,15 @@
+#kangaroo1 position and speed & kangaroo2 position and speed
+k = list(map(int,input().split(" ")))
+if(k[0] > k[2] and k[1] > k[3]):
+    print("NO")
+c=0
+for i in range (0,10001):
+    k[0]=k[0]+k[1]
+    k[2]=k[2]+k[3]
+    if(k[0]==k[2]):
+        c=+1
+        break
+if(c>0):
+    print("YES")
+else:
+    print("NO")
