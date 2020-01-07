@@ -7,7 +7,7 @@ def socksMerchant(socks):
                 if val == socks[i]:
                     total = total + 1
         pair = int(total / 2)
-    totalPair += pair
+        totalPair += pair
     return (totalPair)
 
 
