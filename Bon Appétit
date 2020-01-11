@@ -1,0 +1,46 @@
+Solution  :
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the bonAppetit function below.
+def bonAppetit(bill, k, b):
+    sum_array = 0
+    sum_array_shared = 0
+    anna_sum = 0
+    anna_sum_shared = 0
+
+    for i in range(0,len(bill)):
+        sum_array = sum_array + bill[i]
+        #Sum of all the elements of array after sharing
+        sum_array_shared = (sum_array)/2
+    #subtracting item that anna didn't had
+    anna_sum=sum_array-bill[k]
+    #Sum of anna after sharing
+    anna_sum_shared = (anna_sum)/2
+    if(b == anna_sum_shared):
+        print("Bon Appetit")
+    else : 
+        print (int(sum_array_shared - anna_sum_shared))
+
+
+
+
+
+if __name__ == '__main__':
+    nk = input().rstrip().split()
+
+    n = int(nk[0])
+
+    k_refuses = int(nk[1])
+
+    bill = list(map(int, input().rstrip().split()))
+
+    b_charged = int(input().strip())
+
+    bonAppetit(bill, k_refuses, b_charged)
