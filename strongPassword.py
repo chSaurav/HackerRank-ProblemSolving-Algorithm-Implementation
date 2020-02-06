@@ -34,7 +34,7 @@ if(lenstr>=6):
 #if length is less than 6
 else:
 #if conditions are greater than 6 - length of password
-    if(tofulfill>6-lenstr):
+    if(tofulfill>(6-lenstr)):
         print(tofulfill)
     else:
         print(6-lenstr)
